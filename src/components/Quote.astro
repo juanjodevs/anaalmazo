@@ -1,0 +1,11 @@
+---
+const { text, author } = Astro.props;
+---
+<section class="flex flex-col text-right py-16 px-6 gap-5">
+    <p class="text-teal-700 italic text-xl max-w-4xl self-end">
+        "{text}"
+    </p>
+    <p class="text-neutral-700">
+        {author}
+    </p>
+</section>

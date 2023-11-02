@@ -1,0 +1,36 @@
+---
+import '@fontsource/poppins/400.css'
+import '@fontsource/poppins/500.css'
+import '@fontsource/poppins/700.css'
+
+const { title } = Astro.props;
+import Header from '@components/Header.astro'
+import Footer from '@components/Footer.astro'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="keywords" content="Ana Almazo, meraki, psicología, psicólogo, psicóloga, sanitario, sanitaria, Sevilla, Conil, EMDR, gestalt, sistémica, sensoriomotriz, terapia, colegiada, psicoterapia, psicoterapeuta, sistemas familiares, Asociación Española de EMDR">
+		<meta name="author" content="Ana Almazo">
+		<meta name="description" content="Ayudo a mejorar la vida de las personas, reducir el sufrimiento y las dificultades para enfrentarse a la vida cotidiana.">
+		<title>{title}</title>
+	</head>
+	<body class="max-w-screen-xl m-auto text-neutral-700">
+		<main>
+			<Header/>
+			<slot />
+			<Footer/>
+		</main>
+	</body>
+</html>
+<style is:global>
+	html {
+		font-family: 'Poppins', sans-serif;
+		scroll-behavior: smooth;
+	}
+</style>

@@ -1,0 +1,88 @@
+---
+import Emdr from '@components/Therapies/Emdr.astro'
+import Sensoriomotriz from '@components/Therapies/Sensoriomotriz.astro'
+import Gestalt from '@components/Therapies/Gestalt.astro'
+import Sistematica from '@components/Therapies/Sistematica.astro'
+---
+<section id="terapias" class="flex flex-col pt-16 px-5 text-teal-700">
+    <h2 class="text-2xl font-bold md:text-5xl">Terapias</h2>
+    <div class="mt-5">
+        <div class="grid grid-cols-2 gap-2 px-2 justify-center md:grid-cols-4">
+            <div data-index="0" class="tab cursor-pointer text-center text-sm py-2 bg-teal-700 text-white rounded-md border-teal-700 border-2 md:rounded-b-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="m-auto" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                    <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"></path>
+                </svg>
+                <div class="mt-2">EMDR</div>
+            </div>
+            <div data-index="1" class="tab cursor-pointer text-center text-sm py-2 rounded-md border-teal-700 border-2 md:rounded-b-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="m-auto" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+                 </svg>
+                <div class="mt-2">SENSORIOMOTRIZ</div>
+            </div>
+            <div data-index="2" class="tab cursor-pointer text-center text-sm py-2 rounded-md border-teal-700 border-2 md:rounded-b-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="m-auto" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                 </svg>
+                <div class="mt-2">GESTALT</div>
+            </div>
+            <div data-index="3" class="tab cursor-pointer text-center text-sm py-2 rounded-md border-teal-700 border-2 md:rounded-b-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="m-auto" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                    <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
+                 </svg>
+                <div class="mt-2">SISTEMÁTICA</div>
+            </div>
+        </div>
+        <div class="mt-2 bg-teal-700 text-white mx-2 rounded-md p-2 md:mt-0 md:rounded-t-none">
+            <div data-index="0" class="content"><Emdr/></div>
+            <div data-index="1" class="content hidden"><Sensoriomotriz/></div>
+            <div data-index="2" class="content hidden"><Gestalt/></div>
+            <div data-index="3" class="content hidden"><Sistematica/></div>
+        </div>
+    </div>
+</section>
+<style>
+    .content {
+        transition: visibility 1s linear;
+    }
+</style>
+<script>
+    function selectTab(index){
+        document.querySelectorAll('.tab').forEach((el) => {
+            if(el.getAttribute('data-index') === index){
+                el.classList.add('text-white','bg-teal-700')
+                el.classList.remove('text-teal-700')
+            }else{
+                el.classList.add('text-teal-700')
+                el.classList.remove('text-white','bg-teal-700')
+            }
+        })
+    }
+
+    function selectContent(index){
+        document.querySelectorAll('.content').forEach((el) => {
+            if(el.getAttribute('data-index') === index){
+                el.classList.remove('hidden')
+            }else{
+                el.classList.add('hidden')
+            }
+        })
+    }
+
+    document.querySelectorAll('.tab').forEach((el) => {
+        el.addEventListener('click', function(){
+            const index = el.getAttribute('data-index')
+            selectTab(index)
+            selectContent(index)
+        })
+    })
+</script>

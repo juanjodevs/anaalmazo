@@ -1,0 +1,95 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Studies from '@components/Aboutme/Studies.astro'
+import { Image } from 'astro:assets';
+import AboutMeImage from '@assets/aboutme.webp'
+import Button from '@components/UI/Button.astro';
+import Contact from '@components/Contact.astro';
+import Sectionbar from '@components/Sectionbar.astro';
+---
+<Layout title="Ana Almazo - Meraki - Psicología">
+    <section class="flex flex-col px-5 pt-5 md:pt-10">
+        <div class="flex flex-col md:flex-row">
+            <div class="md:basis-1/2">
+                <Image
+                    class="rounded-xl"
+                    src={AboutMeImage}
+                    alt="Ana Alamazo my job section image"
+                />
+            </div>
+            <div class="md:basis-1/2 flex flex-col gap-5">
+                <h2 class="text-2xl font-bold text-teal-700 mt-5 md:mt-0">Sobre mí</h2>
+                <h3 class="text-4xl font-bold md:text-5xl">Ana Almazo</h3>
+                <p class="italic md:text-xl">
+                    “Entiendo la formación y el desarrollo de mi carrera profesional como la vida misma: un continuo aprendizaje, un constante proceso de adaptación y un 'reciclaje' sano y necesario para evolucionar y crecer.”
+                </p>
+                <p class="text-sm text-neutral-600 md:text-base">
+                    Mis inicios como psicóloga fueron como educadora y orientadora en un centro educativo. Durante años tuve la oportunidad de estar en contacto con muchos niños y adolescentes. Me fascinaba conocer a cada uno de ellos, tratando de entender sus dificultades. Esto me llevó a seguir formándome e indagando en el origen del sufrimiento emocional.
+                </p>
+                <p class="text-sm text-neutral-600 md:text-base">
+                    Hace 15 años que trabajo como psicoterapeuta y la curiosidad sigue viajando conmigo, tanto para el autoconocimiento como en la compresión y en el acompañamiento a mis pacientes.
+                </p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-10 mx-auto py-10">
+            <Studies>
+                <p>Psicóloga sanitaria y psicoterapeuta colegiada.</p>
+                <p class="text-teal-700">Colegio oficial de psicología Andalucía Occidental</p>
+            </Studies>
+            <Studies>
+                <p>Licenciada en psicología.</p>
+                <p class="text-teal-700">Universidad de Sevilla</p>
+            </Studies>
+            <Studies>
+                <p>Clínica en Adultos en Terapia EMDR.</p>
+                <p class="text-teal-700">Miembro de la Asociación Española de EMDR</p>
+            </Studies>
+            <Studies>
+                <p>Máster de terapia de sistemas familiares.</p>
+                <p class="text-teal-700">Universidad de Sevilla</p>
+            </Studies>
+            <Studies>
+                <p>Formación en Terapia Sensoriomotriz.</p>
+                <p class="text-teal-700">Instituto de terapia sensoriomotriz Carl Rogers</p>
+            </Studies>
+            <Studies>
+                <p>Psicoterapeuta en Gestalt de Adultos.</p>
+                <p class="text-teal-700">Instituto Gestalt de Barcelona</p>
+            </Studies>
+            <Studies>
+                <p>Experto en Terapia Humanista</p>
+                <p class="text-teal-700">Universidad de Sevilla</p>
+            </Studies>
+            <Studies>
+                <p>Técnica en Violencia de género</p>
+                <p class="text-teal-700">Escuela de formación Astrea-icsce.org</p>
+            </Studies>
+            <Studies>
+                <p>Curso Trastorno alimentarios y EMDR</p>
+                <p class="text-teal-700">Asociación EMDR, Madrid</p>
+            </Studies>
+            <Studies>
+                <p>Formación en Trastornos disociativos</p>
+                <p class="text-teal-700">Asociación EMDR. Madrid</p>
+            </Studies>
+            <Studies>
+                <p>Formación en Terapia EMDR para niños y Adolescentes</p>
+                <p class="text-teal-700">Asociación de EMDR Madrid</p>
+            </Studies>
+            <Studies>
+                <p>Formación Gestalt Infantil/adolescentes</p>
+                <p class="text-teal-700">Escuela Umayquipa, Madrid</p>
+            </Studies>
+            <Studies>
+                <p>Master en Logopedia</p>
+                <p class="text-teal-700">Universidad Europea de Madrid</p>
+            </Studies>
+            <Studies>
+                <p>Experto en Adicciones</p>
+                <p class="text-teal-700">Universidad de Cádiz</p>
+            </Studies>
+        </div>
+        <Sectionbar/>
+        <Contact/>
+    </section>
+</Layout>

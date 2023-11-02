@@ -1,0 +1,92 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import EmdrImg from '@components/Therapies/thumb-emdr.webp'
+import SensoriomotrizImg from '@components/Therapies/thumb-sensoriomotriz.webp'
+import GestaltImg from '@components/Therapies/thumb-gestalt.webp'
+import SistemicaImg from '@components/Therapies/thumb-sistemica.webp'
+import Contact from '@components/Contact.astro';
+import Sectionbar from '@components/Sectionbar.astro';
+---
+<Layout title="Ana Almazo - Meraki - Psicología">
+    <section class="flex flex-col px-5 pt-5 md:pt-10">
+        <h1 class="text-teal-700 text-4xl font-bold mb-5">Terapias</h1>
+        <div class="flex flex-col gap-5 mb-10 md:grid md:grid-cols-2 md:gap-10">
+            <div class="flex flex-col gap-5">
+                <h2 class="text-center font-bold text-3xl">EMDR</h2>
+                <div class="flex justify-center">
+                    <Image
+                        class="rounded-xl md:max-w-md"
+                        src={EmdrImg}
+                        alt="Emdr therapie image"
+                    />
+                </div>
+                <p>
+                    Es una técnica psicoterapéutica que <span class="font-bold">trata los problemas emocionales derivados de experiencias traumáticas mediante</span> movimientos oculares y/o estimulación táctil.
+                </p>
+                <p>
+                    Los traumas son heridas emocionales que se producen como consecuencia de acontecimientos de diversa índole como una catástrofe natural, el abuso físico o psíquico, un accidente, la pérdida de un ser querido…La calidad e intensidad del daño que produce el trauma va a depender de las características de la persona que lo sufre, las circunstancias que está viviendo y el apoyo emocional con que cuente.
+                </p>
+                <p>
+                    Con la ayuda del psicólogo, <span class="font-bold">el paciente describe el suceso traumático y los aspectos que más le atormentan con el fin de identificar el problema específico y enfocar el tratamiento, permitiendo que el paciente pueda procesar la información sobre la experiencia traumática y reducir la carga emocional que soporta.</span>
+                </p>
+            </div>
+            <div class="flex flex-col gap-5">
+                <h2 class="text-center font-bold text-3xl">Sensoriomotriz</h2>
+                <div class="flex justify-center">
+                    <Image
+                        class="rounded-xl md:max-w-md"
+                        src={SensoriomotrizImg}
+                        alt="Emdr therapie image"
+                    />
+                </div>
+                <p>
+                    <span class="font-bold">Considera</span> que todas nuestras <span class="font-bold">experiencias vitales, heridas emocionales y cómo nos vinculamos al inicio de la vida determinan cómo nos relacionamos</span> con nuestro entorno, así <span class="font-bold">cómo es nuestra salud emocional</span>. Tiene muy en cuenta el cuerpo. <span class="font-bold">Procesa respuestas corporales además de las cognitivas o emocionales.</span>
+                </p>
+                <p class="font-bold text-lg">
+                    ¿Cómo complementa esta terapia a la EMDR?
+                </p>
+                <p>
+                    La terapia sensoriomotriz secuencia las respuestas corporales desreguladas y las procesa somáticamente. Diría como especialista en EMDR que la terapia sensoriomotriz es un complemento perfecto, ya que hay determinados síntomas, memorias corporales que no se pueden procesar tan fácilmente con EMDR, además de que puede ser menos abrumador para el paciente, creo que la combinación de ambas es un trabajo complementario, la síntesis de lo mental y lo corporal.
+                </p>
+            </div>
+            <div class="flex flex-col gap-5">
+                <h2 class="text-center font-bold text-3xl">Gestalt</h2>
+                <div class="flex justify-center">
+                    <Image
+                        class="rounded-xl md:max-w-md"
+                        src={GestaltImg}
+                        alt="Emdr therapie image"
+                    />
+                </div>
+                <p>
+                    Es una terapia de corte humanista que se caracteriza por no tratar exclusivamente la enfermedad, sino también <span class="font-bold">fomentar el desarrollo del potencial humano y la autorrealización</span>.
+                </p>
+                <p>
+                    La terapia Gestalt pone el <span class="font-bold">énfasis</span> en lo que sucede en el momento <span class="font-bold">presente</span>; sin dejar de lado la historia de la persona, <span class="font-bold">enfocando en el aquí y ahora cómo afectan los hechos del pasado</span>.
+                </p>
+                <p>
+                    Pone <span class="font-bold">al paciente en una posición activa para el cambio</span>, ya que <span class="font-bold">utiliza el darse cuenta como método</span> del proceso terapéutico. Esto implica tomar conciencia de qué pensamientos, emociones y sensaciones físicas nos influyen de forma negativa para poder llevar una vida más completa y sana.
+                </p>
+            </div>
+            <div class="flex flex-col gap-5">
+                <h2 class="text-center font-bold text-3xl">Sistémica</h2>
+                <div class="flex justify-center">
+                    <Image
+                        class="rounded-xl md:max-w-md"
+                        src={SistemicaImg}
+                        alt="Emdr therapie image"
+                    />
+                </div>
+                <p>
+                    Este enfoque de la psicología humanista, concibe y <span class="font-bold">trata las disfunciones y trastornos mentales como</span> la manifestación de <span class="font-bold">alteraciones en la forma de relacionarnos y de comunicarnos con nuestro entorno</span>.
+                </p>
+                <p>
+                    Trata a la persona entendiéndolo dentro de un contexto social primario, de un sistema de base que no es otro que la familia. <span class="font-bold">Las relaciones</span> que se establecen <span class="font-bold">dentro de la familia</span> son <span class="font-bold">determinantes</span> en el desarrollo de <span class="font-bold">creencias e interpretaciones del mundo</span> y, en <span class="font-bold">especial</span>, la <span class="font-bold">relación con los padres</span> determinan con énfasis la conducta futura del individuo.
+                </p>
+            </div>
+        </div>
+        <Sectionbar/>
+        <Contact/>
+    </section>
+</Layout>

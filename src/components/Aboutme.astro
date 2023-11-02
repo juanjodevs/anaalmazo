@@ -1,0 +1,51 @@
+---
+import Studies from '@components/Aboutme/Studies.astro'
+import { Image } from 'astro:assets';
+import AboutMeImage from '@assets/aboutme.webp'
+import Button from '@components/UI/Button.astro';
+---
+<section id="sobremi" class="flex flex-col px-5 pt-16 md:flex-row md:gap-24">
+    <div class="md:basis-1/2">
+        <Image
+            class="rounded-xl"
+            src={AboutMeImage}
+            alt="Ana Alamazo my job section image"
+        />
+    </div>
+    <div class="md:basis-1/2 flex flex-col gap-5">
+        <h2 class="text-2xl font-bold text-teal-700 mt-5 md:mt-0">Sobre mí</h2>
+        <h3 class="text-4xl font-bold md:text-5xl">Ana Almazo</h3>
+        <p class="italic md:text-xl">
+            “Entiendo la formación y el desarrollo de mi carrera profesional como la vida misma: un continuo aprendizaje, un constante proceso de adaptación y un 'reciclaje' sano y necesario para evolucionar y crecer.”
+        </p>
+        <div class="flex flex-col text-xs gap-2 md:text-base md:gap-4">
+            <Studies>
+                <p>Psicóloga sanitaria y psicoterapeuta colegiada.</p>
+                <p class="text-teal-700">Colegio oficial de psicología Andalucía Occidental</p>
+            </Studies>
+            <Studies>
+                <p>Licenciada en psicología.</p>
+                <p class="text-teal-700">Universidad de Sevilla</p>
+            </Studies>
+            <Studies>
+                <p>Clínica en Adultos en Terapia EMDR.</p>
+                <p class="text-teal-700">Miembro de la Asociación Española de EMDR</p>
+            </Studies>
+            <Studies>
+                <p>Máster de terapia de sistemas familiares.</p>
+                <p class="text-teal-700">Universidad de Sevilla</p>
+            </Studies>
+            <Studies>
+                <p>Formación en Terapia Sensoriomotriz.</p>
+                <p class="text-teal-700">Instituto de terapia sensoriomotriz Carl Rogers</p>
+            </Studies>
+            <Studies>
+                <p>Psicoterapeuta en Gestalt de Adultos.</p>
+                <p class="text-teal-700">Instituto Gestalt de Barcelona</p>
+            </Studies>
+        </div>
+        <div class="flex justify-center">
+            <Button link="/sobremi">Ver CV completo</Button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,10 @@
+---
+const { title, description } = Astro.props;
+---
+<article class="flex flex-col gap-3 text-center">
+    <div>
+        <slot/>
+    </div>
+    <div class="font-bold text-lg text-neutral-700">{title}</div>
+    <div class="text-neutral-700">{description}</div>
+</article>
