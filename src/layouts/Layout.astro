@@ -12,12 +12,11 @@ import Footer from '@components/Footer.astro'
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="keywords" content="Ana Almazo, meraki, psicología, psicólogo, psicóloga, sanitario, sanitaria, Sevilla, Conil, EMDR, gestalt, sistémica, sensoriomotriz, terapia, colegiada, psicoterapia, psicoterapeuta, sistemas familiares, Asociación Española de EMDR">
 		<meta name="author" content="Ana Almazo">
-		<meta name="description" content="Ayudo a mejorar la vida de las personas, reducir el sufrimiento y las dificultades para enfrentarse a la vida cotidiana.">
+		<slot name="description"/>
 		<title>{title}</title>
 	</head>
 	<body class="max-w-screen-xl m-auto text-neutral-700">
