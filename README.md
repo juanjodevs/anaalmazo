@@ -2,7 +2,7 @@
 
 Reworked site of my friend Ana Almazo made with [Astro](https://astro.build)
 
-[Preview](https://yaxc.juanjodevs.com)
+[Preview](https://anaalmazo.juanjodevs.com)
 
 ## Tech used
 
